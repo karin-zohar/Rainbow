@@ -12,11 +12,11 @@ function getPalette() {
 }
 
 function getSlot() {
-    return {'color': getRandomColor()}
-}
-
-function getRandomColor() {
     //temp
-    return 'red'
+   const slot = {
+    colorName: 'red',
+    hexCode: '#dc2626'
+   }
+   return slot
 }
 
