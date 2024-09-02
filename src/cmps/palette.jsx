@@ -8,11 +8,11 @@ export function Palette() {
 
     return (
         <div className="palette h-2/3 w-1/2 self-center">
-            <ul className="h-full flex">
+            <ul className="h-full flex flex-col md:flex-row">
                 {currPalette.map((slot, idx) => {
                     return (
 
-                        <li className="slot-container h-full w-1/5 border-solid mx-1" key={idx}>
+                        <li className="slot-container h-full md:w-1/5 border-solid m-1" key={idx}>
                             <PaletteSlot slot={slot} />
                         </li>
                     )
