@@ -3,8 +3,16 @@ import { PaletteSlot } from "./palette-slot"
 import { paletteService } from "../services/palette.service"
 
 export function Palette() {
-    // const [currPalette, setCurrPalette] = useState(paletteService.getPalette())
-    const currPalette = paletteService.getPalette()
+    const [currPalette, setCurrPalette] = useState([])
+   
+    useEffect(() => {
+        fetchPalette()
+    }, [])
+
+    const fetchPalette = async () => {
+        const newPalette = await paletteService.getPalette()
+        setCurrPalette(newPalette)
+    }
 
     return (
         <div className="palette h-2/3 w-1/2 self-center">
